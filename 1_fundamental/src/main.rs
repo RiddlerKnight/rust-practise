@@ -1,3 +1,6 @@
+mod hello_lib; // Declare the hello_lib module
+use hello_lib::greet; // Import the greet function from the hello_lib module
+
 fn main() {
     println!("Hello, world!");
 
@@ -7,6 +10,10 @@ fn main() {
 
     println!("Function Example 1: {}", function_example_1(10));
     function_example_2(10);
+
+    greet(); // Call the greet function from the library
+    // or
+    hello_lib::greet(); // Call the greet function using the module path
 }
 
 fn variables(){
