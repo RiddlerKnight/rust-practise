@@ -3,6 +3,7 @@ fn main() {
 
     variables();
     scopes();
+    memory_safety();
 }
 
 fn variables(){
@@ -31,5 +32,16 @@ fn scopes(){
         println!("Inner x: {}", x);
     }
     println!("Outer x: {}", x);
+    println!("============================");
+}
+
+fn memory_safety(){
+    let enigmar: i32;
+    if true { // eventhough this condition is always true, the compiler cannot guarantee it
+        enigmar = 42; // must be initialized before use
+    }else { // you must cover all possible paths to ensure initialization
+        enigmar = 0;
+    }
+    println!("Enigmar: {}", enigmar); // This is safe because enigmar is guaranteed to be initialized
     println!("============================");
 }
