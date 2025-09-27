@@ -1,3 +1,5 @@
+mod working_with_string;
+
 fn main() {
     let foo = 11;
     if foo <= 5 {
@@ -78,4 +80,6 @@ fn main() {
             println!("col: {}", col);
         }
     }
+
+    working_with_string::run();
 }
