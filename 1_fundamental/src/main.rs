@@ -4,6 +4,9 @@ fn main() {
     variables();
     scopes();
     memory_safety();
+
+    println!("Function Example 1: {}", function_example_1(10));
+    function_example_2(10);
 }
 
 fn variables(){
@@ -44,4 +47,15 @@ fn memory_safety(){
     }
     println!("Enigmar: {}", enigmar); // This is safe because enigmar is guaranteed to be initialized
     println!("============================");
+}
+
+fn function_example_1(param: i32) -> i32 {
+    param * 2 // implicit return without semicolon
+    // println!("This line is unreachable"); // This will cause a compile-time warning
+}
+
+fn function_example_2(param: i32) -> i32 {
+    let result = param * 2;
+    println!("Result inside function: {}", result);
+    return result; // explicit return
 }
