@@ -1,3 +1,5 @@
+mod ex_robot;
+
 // Structs are custom data types that let you package together related values.
 // They are similar to tuples, but each field in a struct has a name, making it easier to
 // understand what each value represents.
@@ -46,4 +48,8 @@ fn main() {
     println!("Y coordinate: {}", p2.get_y()); // Calling a method on the Point instance
 
     println!("Description: {}", p2.describe()); // Calling the describe method from the Describable trait
+
+    // Using the ExRobot struct and Robot trait from the ex_robot module
+    let first_robot = ex_robot::ExRobot { name: String::from("NanoBot") };
+    ex_robot::run_robot(&first_robot); // Using the run_robot function to run the robot
 }
