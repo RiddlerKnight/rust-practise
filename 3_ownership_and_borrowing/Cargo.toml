@@ -1,5 +1,5 @@
 [package]
-name = "heart_of_rust"
+name = "ownership_and_borrowing"
 version = "0.1.0"
 edition = "2024"
 
