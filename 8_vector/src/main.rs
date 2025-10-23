@@ -21,4 +21,9 @@ fn main() {
     println!("Length: {}", weapons.len());
     // note: In Rust, Capacity will double when more space is needed.
     // note: Length is the current number of elements in the vector.
+
+    let money = vec![100, 200, 300, 400, 500];
+    let result: Vec<i32> = money.iter().map(|m| m * 2).collect();
+    println!("--- Money after doubling ---");
+    result.iter().for_each(|m| println!("Money: {}", m));
 }
